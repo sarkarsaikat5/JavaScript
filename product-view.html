@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product-view</title>
+</head>
+<body>
+    3
+    <div style="height: 100px; width: 100px; border: 2px solid green; margin-bottom: 10px;" class="box">
+        <!-- <img src="./n.jpg" class="box" alt=""> -->
+    </div>
+    <div id="buttons"></div>
+
+    <script>
+        const colors =["Red", "Green", "Blue", "Black", "Yellow"];
+
+        const box = document.getElementsByClassName("box");
+        const buttons = document.getElementById("buttons");
+
+        var el = '';
+
+        colors.forEach(color => {
+            el +=`
+                <button onclick="toggle('${color}')">Click ${color}</button>
+            `
+        });
+
+        buttons.innerHTML = el;
+
+
+        function toggle(color) {
+            console.log(color);
+            box[0].style.backgroundColor = color; 
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onclick</title>
+</head>
+<body>
+    2
+    <div style="height: 100px; width: 100px; border: 2px solid green; margin-bottom: 10px;" class="box"></div>
+    <button onclick="toggle('red')">Click me</button>
+    <button onclick="toggle('blue')">Click me</button>
+    <button onclick="toggle('yellow')">Click me</button>
+    <button onclick="toggle('black')">Click me</button>
+    <button onclick="toggle('green')">Click me</button>
+
+    <script>
+        const box = document.getElementsByClassName ("box");
+
+        function toggle(color) {
+            console.log(color);
+            box[0].style.backgroundColor = color;
+            
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product-view</title>
+</head>
+<body>
+    4
+    <img src="" id="img" alt="Product img" style="height: 200px; width: 200px;">
+    <div id="buttons"></div>
+
+    <script>
+        const photos =["b-1.jpeg", "b-2.jpeg", "b-3.jpeg", "b-4.jpeg"];
+
+        const img = document.getElementById("img");
+        const buttons = document.getElementById("buttons");
+
+        var el = '';
+
+        photos.forEach(photo => {
+            el +=`
+                <button onclick="switchphoto('${photo}')">Click ${photo}</button>
+            `
+        });
+
+        buttons.innerHTML = el;
+
+
+        function switchphoto(photo) {
+            img.src = `/img/` + photo;
+        }
+    </script>
+</body>
+</html>
